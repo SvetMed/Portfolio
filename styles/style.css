@@ -1,0 +1,140 @@
+@import url("fonts.css");
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: "Proxima Nova Light", Arial, sans-serif;
+    font-weight: 300;
+    color: #fff;
+    background-color: #000;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.container{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+.header{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    min-height: 90px;
+    background-color: transparent;
+
+}
+
+.header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    
+}
+.header__nav a{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: color .3s linear;
+}
+
+.header__nav a:hover, .header__nav a:focus{
+    color:#f84545;
+}
+
+.header__nav li:not(:last-child){
+    margin-right: 75px;
+}
+
+.hero{
+    height:895px;
+    display: flex;
+    background-image: url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #222;
+
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__title{
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.hero__link{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #f84545;
+    text-decoration: none;
+    letter-spacing: 12px;
+    transition: all .3s linear;
+}
+
+.hero__link:hover, .hero__link:focus {
+    color: #fff;
+    letter-spacing: 18px;
+}
+
+.hero__arrow{
+    position: absolute;
+    bottom: 70px;
+    text-decoration: none;
+}
+
+.hero__arrow img{
+    width:40px;
+    animation: animateArrow 2s linear infinite;
+}
+
+@keyframes animateArrow{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
